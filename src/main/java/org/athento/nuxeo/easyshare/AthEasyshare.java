@@ -106,7 +106,6 @@ public class AthEasyshare extends ModuleRoot {
             @Override
             public Object run(CoreSession session, IdRef docRef)
                     throws ClientException {
-                log.info("Go with " + docRef);
                 DocumentModel doc = session.getDocument(docRef);
                 BlobProperty blob = (BlobProperty) doc.getProperty("file:content");
                 String iconPath = "/icons/file.png";
