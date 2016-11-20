@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.athento-nx-easyshare.workflow-contrib"
+	version="1.0.0">
+
+	<extension target="org.nuxeo.ecm.platform.jbpm.core.JbpmService" point="typeFilter">
+		<type name="EasyShareFolder">
+			<processDefinition>review_parallel</processDefinition>
+			<processDefinition>review_approbation</processDefinition>
+		</type>
+	</extension>
+	
+</component>

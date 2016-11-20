@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.athento.ui.athento-nx-easyshare.openurl-contrib">
+    <extension point="openUrl"
+               target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService">
+        <openUrl name="EasyShare">
+            <grantPattern>/nuxeo/site/easyshare/.*</grantPattern>
+        </openUrl>
+        <openUrl name="EasyShareSkins">
+            <grantPattern>/nuxeo/site/skin/easyshare/.*</grantPattern>
+        </openUrl>
+        <openUrl name="EasyShareCss">
+            <grantPattern>/nuxeo/site/skin/easyshare/css/.*</grantPattern>
+        </openUrl>
+        <openUrl name="EasyShareImages">
+            <grantPattern>/nuxeo/site/skin/easyshare/image/.*</grantPattern>
+        </openUrl>
+    </extension>
+
+    <extension target="org.nuxeo.ecm.platform.ec.notification.service.NotificationService" point="templates">
+        <template name="easyShareEmail" src="data/templates/easyShareEmail.ftl"/>
+    </extension>
+
+</component>

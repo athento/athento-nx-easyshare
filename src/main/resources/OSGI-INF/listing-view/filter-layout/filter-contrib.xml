@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.athento-nx-easyshare.filter-contrib"
+	version="1.0.0">
+
+	<extension target="org.nuxeo.ecm.platform.actions.ActionService" point="filters">
+		<filter id="create" append="true">
+			<rule grant="true">
+				<permission>AddChildren</permission>
+				<type>EasyShareFolder</type>
+				<condition>!document.isImmutable()</condition>
+				<condition>#{typeManager.getAllowedSubTypes(document.getType(), document).size() &gt; 0}</condition>
+			</rule>
+		</filter>
+	</extension>
+
+</component>

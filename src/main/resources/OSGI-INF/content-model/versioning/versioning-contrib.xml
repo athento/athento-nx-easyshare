@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.athento-nx-easyshare.versioning-contrib"
+	version="1.0.0">
+
+	<extension target="org.nuxeo.ecm.core.versioning.VersioningService" point="versioningRules">
+		<versioningRule typeName="EasyShareFolder">
+			<initialState major="0" minor="0"/>
+			<options lifeCycleState="*">
+				<none default="true"/>
+				<minor/>
+				<major/>
+			</options>
+		</versioningRule>
+	</extension>
+
+
+</component>

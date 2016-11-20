@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.athento-athento-nx-easyshare.schema-contrib"
+		   version="1.0.0">
+
+	<extension target="org.nuxeo.ecm.core.schema.TypeService"
+			   point="schema">
+
+		<extension target="org.nuxeo.ecm.core.schema.TypeService" point="schema">
+			<schema name="easysharefolder" prefix="eshare" src="data/schemas/easysharefolder.xsd"/>
+		</extension>
+
+
+	</extension>
+
+</component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.athento-nx-easyshare.actions-contrib"
+	version="1.0.0">
+
+	<extension target="org.nuxeo.ecm.platform.actions.ActionService"
+			   point="actions">
+		<action id="showEasyShareURL" label="Public URL"
+				icon="/icons/contextual_menu/share.png" order="20" type="fancybox">
+			<filter id="easyShareFolderFilter">
+				<rule grant="true">
+					<type>EasyShareFolder</type>
+				</rule>
+			</filter>
+			<properties>
+				<property name="include">/incl/easyshare_url_box.xhtml</property>
+				<property name="ajaxSupport">true</property>
+			</properties>
+		</action>
+	</extension>
+
+
+</component>

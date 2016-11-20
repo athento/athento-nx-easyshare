@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="org.athento.nuxeo.athento-nx-easyshare.chains-contrib"
+	version="1.0.0">
+
+	<extension target="org.nuxeo.ecm.core.operation.OperationServiceComponent" point="chains">
+		<chain id="addToAShareDocument">
+			<operation id="Seam.GetCurrentDocument"/>
+			<operation id="Context.SetInputAsVar">
+				<param type="string" name="name">shareDocument</param>
+			</operation>
+			<operation id="Context.SetVar">
+				<param type="string" name="name">shareDocumentPath</param>
+				<param type="object" name="value">expr:Document.path</param>
+			</operation>
+			<operation id="Seam.FetchFromWorklist"/>
+			<operation id="CreateProxyLive">
+				<param type="string" name="Destination Path">expr:shareDocumentPath</param>
+			</operation>
+			<operation id="Context.RestoreDocumentInput">
+				<param type="string" name="name">shareDocument</param>
+			</operation>
+			<operation id="Audit.Log">
+				<param type="string" name="event">Documents added to the share</param>
+				<param type="string" name="category">EasyShareFolderCategory</param>
+				<param type="string" name="comment">expr:Some documents were added to the share folder @{Document["dc:title"]}</param>
+			</operation>
+			<operation id="Seam.Refresh"/>
+			<operation id="Seam.AddInfoMessage">
+				<param type="string" name="message">Added</param>
+			</operation>
+		</chain>
+		<chain id="navToParent">
+			<operation id="Context.FetchDocument"/>
+			<operation id="Document.GetParent"/>
+			<operation id="Seam.NavigateTo"/>
+		</chain>
+	</extension>
+
+
+</component>
