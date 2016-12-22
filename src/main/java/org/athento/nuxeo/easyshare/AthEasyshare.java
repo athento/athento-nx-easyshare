@@ -136,6 +136,9 @@ public class AthEasyshare extends ModuleRoot {
      */
     public String getFileName(DocumentModel doc) throws ClientException {
         Blob blob = ((BlobHolder)doc.getAdapter(BlobHolder.class)).getBlob();
+        if (blob == null) {
+            return doc.getTitle();
+        }
         return blob.getFilename();
     }
 
