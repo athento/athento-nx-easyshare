@@ -1,0 +1,13 @@
+<assembly>
+	<artifactSet id="project-plugins">
+		<artifacts>
+			<artifact group="org.athento.nuxeo" name="athento-nx-easyshare"
+				version="${projectParentVersion}" />
+		</artifacts>
+	</artifactSet>
+	<artifactSet id="athento-plugins">
+		<artifacts>
+		</artifacts>
+	</artifactSet>
+</assembly>
+
