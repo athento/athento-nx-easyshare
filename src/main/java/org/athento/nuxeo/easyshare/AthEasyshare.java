@@ -7,7 +7,6 @@ import org.nuxeo.ecm.automation.OperationContext;
 import org.nuxeo.ecm.core.api.*;
 import org.nuxeo.ecm.core.api.blobholder.BlobHolder;
 import org.nuxeo.ecm.core.api.model.impl.primitives.BlobProperty;
-import org.nuxeo.ecm.core.storage.StorageBlob;
 import org.nuxeo.ecm.platform.ec.notification.email.EmailHelper;
 import org.nuxeo.ecm.platform.mimetype.interfaces.MimetypeEntry;
 import org.nuxeo.ecm.platform.mimetype.interfaces.MimetypeRegistry;
@@ -112,7 +111,7 @@ public class AthEasyshare extends ModuleRoot {
                 if (blob != null) {
                     try {
                         MimetypeRegistry mimetypeRegistry = Framework.getService(MimetypeRegistry.class);
-                        MimetypeEntry mimeEntry = mimetypeRegistry.getMimetypeEntryByMimeType(((StorageBlob) blob.getValue()).getMimeType());
+                        MimetypeEntry mimeEntry = mimetypeRegistry.getMimetypeEntryByMimeType(((Blob) blob.getValue()).getMimeType());
                         if (mimeEntry != null) {
                             if (mimeEntry.getIconPath() != null) {
                                 iconPath = "/icons/" + mimeEntry.getIconPath();
