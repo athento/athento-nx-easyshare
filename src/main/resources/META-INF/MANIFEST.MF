@@ -35,6 +35,7 @@ Nuxeo-Component: OSGI-INF/automation/automation-chain/chain-contrib.xml,
  OSGI-INF/reporting/report-contrib.xml,
  OSGI-INF/rest-api/restAPI-contrib.xml,
  OSGI-INF/vocabulary/vocabulary-contrib.xml,
- OSGI-INF/workflow/workflow-contrib.xml
+ OSGI-INF/workflow/workflow-contrib.xml,
+ OSGI-INF/notification/notification-contrib.xml
 Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=easyshare;package=org/athento/nuxeo/easyshare
 Created-By: Athento

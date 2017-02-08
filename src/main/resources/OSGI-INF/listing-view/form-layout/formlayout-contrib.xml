@@ -323,7 +323,7 @@
 						<property name="nxl_colspan_2">1</property>
 					</properties>
 					<widget>documentAction</widget>
-					<widget/>
+					<widget>sendDocumentAction</widget>
 					<widget/>
 				</row>
 			</rows>
@@ -399,6 +399,18 @@
 				<properties widgetMode="view">
 					<property name="useAjaxForm">false</property>
 					<property name="actionId">showEasyShareURL</property>
+					<property name="actionsDisplay">buttons</property>
+				</properties>
+			</widget>
+			<widget name="sendDocumentAction" type="documentAction">
+				<labels>
+					<label mode="any"></label>
+				</labels>
+				<translated>false</translated>
+				<fields/>
+				<properties widgetMode="view">
+					<property name="useAjaxForm">false</property>
+					<property name="actionId">sendEasyShareUrl</property>
 					<property name="actionsDisplay">buttons</property>
 				</properties>
 			</widget>

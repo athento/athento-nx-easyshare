@@ -1,0 +1,28 @@
+<div xmlns:f="http://java.sun.com/jsf/core"
+           xmlns:h="http://java.sun.com/jsf/html"
+           xmlns:a4j="http://richfaces.org/a4j">
+
+<h3><h:outputText value="#{messages['label.sendemail.title']}" /></h3>
+<h:form>
+    <div class="content">
+        <p class="popUpDescription">
+            <h:outputFormat value="#{messages['label.sendemail.description']}">
+                <f:param value="#{currentDocument.title}"/>
+            </h:outputFormat>
+        </p>
+        <h:inputText value="#{easyShareAction.emailAddress}"
+                     size="60"/>
+        <a4j:commandButton action="#{easyShareAction.sendPublicURL}" value="#{messages['label.sendemail.send']}" render="facesStatusMessagePanel" onclick="closePopup()"/>
+    </div>
+</h:form>
+
+<script>
+    function closePopup() {
+      setTimeout(
+        function waitForClose() {
+            jQuery.fancybox.close();
+        }, 1000);
+    }
+    </script>
+
+</div>
