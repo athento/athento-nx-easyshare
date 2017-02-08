@@ -194,7 +194,7 @@ public class AthEasyshare extends ModuleRoot {
                             log.debug("Easyshare: starting email");
                             EmailHelper emailer = new EmailHelper();
                             Map<String, Object> mailProps = new Hashtable<String, Object>();
-                            mailProps.put("mail.from", "system@nuxeo.com");
+                            mailProps.put("mail.from", Framework.getProperty("email.from", "noreply@athento.com"));
                             mailProps.put("mail.to", email);
                             mailProps.put("subject", "EasyShare Download Notification");
                             mailProps.put("body", "File "+fileName+" from "+shareName+" downloaded by "+request.getRemoteAddr());

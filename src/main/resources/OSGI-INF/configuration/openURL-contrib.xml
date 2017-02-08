@@ -16,8 +16,4 @@
         </openUrl>
     </extension>
 
-    <extension target="org.nuxeo.ecm.platform.ec.notification.service.NotificationService" point="templates">
-        <template name="easyShareEmail" src="data/templates/easyShareEmail.ftl"/>
-    </extension>
-
 </component>
