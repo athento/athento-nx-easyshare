@@ -5,7 +5,7 @@
 
 	<extension target="org.nuxeo.ecm.platform.actions.ActionService"
 			   point="actions">
-		<action id="showEasyShareURL" label="Public URL"
+		<action id="showEasyShareURL" label="Copy the Public URL"
 				icon="/icons/contextual_menu/share.png" order="20" type="fancybox">
 			<filter id="easyShareFolderFilter">
 				<rule grant="true">
@@ -14,6 +14,18 @@
 			</filter>
 			<properties>
 				<property name="include">/incl/easyshare_url_box.xhtml</property>
+				<property name="ajaxSupport">true</property>
+			</properties>
+		</action>
+		<action id="sendEasyShareUrl" label="label.action.sendEasyShareUrl"
+				icon="/icons/contextual_menu/share.png" order="30" type="fancybox">
+			<filter id="sendEasyShareUrlFilter">
+				<rule grant="true">
+					<type>EasyShareFolder</type>
+				</rule>
+			</filter>
+			<properties>
+				<property name="include">/incl/easyshare_sendemail_box.xhtml</property>
 				<property name="ajaxSupport">true</property>
 			</properties>
 		</action>
