@@ -77,7 +77,7 @@ public class EasyShareActionBean implements EasyShareAction, Serializable {
         } catch (Exception e) {
             e.printStackTrace();
             facesMessages.add(
-                    INFO,
+                    ERROR,
                     resourcesAccessor.getMessages().get(
                             "label.sendemail.notsent"));
         } finally {
