@@ -62,7 +62,12 @@ public class AthEasyshare extends ModuleRoot {
                                 Response.Status.NOT_FOUND).build();
                     }
 
-                    DocumentModelList docList = session.getChildren(docRef);
+                    DocumentModelList docList = session.getChildren(docRef, null, new Filter() {
+                        @Override
+                        public boolean accept(DocumentModel documentModel) {
+                            return !"deleted".equals(documentModel.getCurrentLifeCycleState());
+                        }
+                    }, null);
 
                     // Audit Log
                     OperationContext ctx = new OperationContext(session);
@@ -107,7 +112,7 @@ public class AthEasyshare extends ModuleRoot {
                     throws ClientException {
                 DocumentModel doc = session.getDocument(docRef);
                 BlobProperty blob = (BlobProperty) doc.getProperty("file:content");
-                String iconPath = "/icons/file.png";
+                String iconPath = "/icons/file.gif";
                 if (blob != null) {
                     try {
                         MimetypeRegistry mimetypeRegistry = Framework.getService(MimetypeRegistry.class);
