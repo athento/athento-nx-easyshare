@@ -57,7 +57,10 @@
 			<actions category="CURRENT_SELECTION_LIST"/>
 			<actions category="cv_actions@advanced_search"/>
 			<resultLayouts>
-				<layout name="search_listing_ajax" title="document_listing" translateTitle="true" iconPath="/icons/document_listing_icon.png" showCSVExport="true" showEditColumns="true" showSpreadsheet="true"/>
+                <layout name="document_listing_thumbnail" title="document_thumbnail_listing"
+                        translateTitle="true" iconPath="/icons/document_listing_icon_2_columns_icon.png"
+                        showSlideshow="true" showEditRows="true" />
+                <layout name="search_listing_ajax" title="document_listing" translateTitle="true" iconPath="/icons/document_listing_icon.png" showCSVExport="true" showEditColumns="true" showSpreadsheet="true"/>
 			</resultLayouts>
 			<resultColumns>#{documentSearchActions.selectedLayoutColumns}</resultColumns>
 			<flags>
