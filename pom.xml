@@ -36,7 +36,7 @@
                 <groupId>org.nuxeo.ecm.distribution</groupId>
                 <artifactId>nuxeo-distribution</artifactId>
                 <scope>import</scope>
-                <version>7.10</version>
+                <version>8.10</version>
                 <type>pom</type>
             </dependency>
         </dependencies>
@@ -241,7 +241,7 @@
                         <url>http://www.athento.com</url>
                         <title>${project.name}</title>
                         <description>${project.description}</description>
-                        <platform>cap-7.10</platform>
+                        <platform>cap-8.10</platform>
                     </properties>
                     <outputDir>addon</outputDir>
                 </configuration>
