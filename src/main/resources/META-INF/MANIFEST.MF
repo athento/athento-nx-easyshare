@@ -2,6 +2,8 @@ Manifest-Version: 1.0
 Bundle-SymbolicName: athento-nx-easyshare
 Bundle-Version: 1.1.0
 Bundle-Name: Athento NX Easyshare
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
 Require-Bundle: org.nuxeo.runtime
 Bundle-ManifestVersion: 2
 Bundle-Vendor: Athento
